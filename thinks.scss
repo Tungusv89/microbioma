@@ -1,0 +1,507 @@
+/*Переменные*/
+
+$minwigth: 320px;
+$mw: 1920;
+$md1: $mw+12;
+$md2: 987.98;
+$md3: 767.98;
+$md4: 479.98;
+$md5: 359.98;
+
+/*--------------------*/
+
+.lesson-list li .item-a {
+    &:first-child {
+        &::before {
+            content: " ";
+        }
+    }
+    &:nth-child(2) {
+        content: "модуль 1";
+    }
+}
+
+
+/*Обнуление*/
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+
+/*--------------------*/
+
+//INPUT==========
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.input {
+    width: 100%;
+    display: block;
+    padding: 6px 10px;
+    height: 30px;
+    border-radius: 2px;
+    background-color: #EDEFF2;
+    color: #939599;
+    font-size: 12px;
+    line-height: 15px;
+    box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.12);
+    &:focus {}
+    &.err {}
+}
+
+textarea.input {
+    resize: none;
+    height: 100px;
+    padding: 10px 18px;
+}
+
+//==========
+//ibg
+.ibg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.ibg img {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+//===============
+
+/*Оболочка*/
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    // &.loaded{}
+}
+
+
+/*-----Оболочка------*/
+
+
+/*Основная сетка*/
+
+.container {
+    max-width: $mw+px;
+    margin: 0 auto;
+    width: 100%;
+    @media (max-width: $md1+px) {
+        max-width: 970px;
+        padding: 0 40px;
+    }
+    @media (max-width: $md2+px) {
+        max-width: 970px;
+        padding: 0 40px;
+    }
+    @media (max-width: $md3+px) {
+        max-width: 750;
+        padding: 0 40px;
+    }
+    @media (max-width: $md4+px) {
+        max-width: 450;
+        padding: 0 30px;
+    }
+    @media (max-width: $md5+px) {
+        max-width: 320;
+        padding: 0 10px;
+    }
+}
+
+
+/*---Основная сетка---*/
+
+@font-face {
+    font-family: 'Conv_MullerExtraBold';
+    src: url('/fonts/MullerExtraBold.eot');
+    /* IE 9 Compatibility Mode */
+    src: url('/fonts/MullerExtraBold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+    url('/fonts/MullerExtraBold.woff2') format('woff2'), /* Super Modern Browsers */
+    url('/fonts/MullerExtraBold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+    url('/fonts/MullerExtraBold.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('/fonts/MullerExtraBold.svg#Conv_MullerExtraBold') format('svg');
+    /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Conv_MullerRegular';
+    src: url('/fonts/MullerRegular.eot');
+    src: local('☺'), url('/fonts/MullerRegular.woff') format('woff'), url('/fonts/MullerRegular.ttf') format('truetype'), url('/fonts/MullerRegular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.wrapper {
+    background-image: linear-gradient(160deg, #fff, #FDE083);
+}
+
+.thanks {
+    width: 100%;
+    height: 889.5px;
+    @media (max-width: 1200px) {
+        height: 920.5px;
+    }
+    @media (max-width: 812px) {
+        height: 972.5px;
+    }
+    @media (max-width: $md3+px) {
+        height: 1150px;
+    }
+    @media (max-width: 690px) {
+        height: 1271px;
+    }
+    @media (max-width: 614px) {
+        height: 965px;
+    }
+    @media (max-width: 594px) {
+        height: 994px;
+    }
+    @media (max-width: 511px) {
+        height: 1022px;
+    }
+    @media (max-width: 499px) {
+        height: 1045px;
+    }
+    @media (max-width: $md4+px) {
+        height: 983px;
+    }
+}
+
+.thanks__down {
+    width: 100%;
+    height: 191px;
+    position: inherit;
+    position: relative;
+    z-index: 3;
+    @media (max-width: 614px) {
+        height: 132px;
+    }
+}
+
+.thanks__title {
+    position: relative;
+    top: -100px;
+    opacity: 0;
+    transition: 0.5s;
+    padding: 130px 60px 0px 60px;
+    font-size: 50px;
+    font-family: 'Conv_MullerRegular';
+    text-align: center;
+    color: #0F4719;
+    line-height: 56px;
+    @media (max-width: $md3+px) {
+        padding: 80px 0px 0px 0px;
+        line-height: 50px;
+    }
+    @media (max-width: 614px) {
+        padding: 50px 0px 0px 0px;
+        font-size: 42px;
+        line-height: 40px;
+    }
+}
+
+.thanks-body {
+    display: flex;
+    @media (max-width: $md3+px) {
+        flex-direction: column;
+    }
+}
+
+.thanks__column {
+    // flex: 1 1 50%;
+    &:first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.thanks__pris {
+    font-size: 22px;
+    font-family: 'Conv_MullerRegular';
+    text-align: left;
+    color: #0F4719;
+    padding: 100px 0px 0px 0px;
+    span {
+        font-family: 'Conv_MullerExtraBold';
+    }
+    @media (max-width: 910px) {
+        br {
+            display: none;
+        }
+    }
+    @media (max-width: $md3+px) {
+        padding: 80px 0px 0px 0px;
+        br {
+            display: block;
+        }
+    }
+    @media (max-width: 614px) {
+        padding: 50px 0px 0px 0px;
+    }
+    @media (max-width: 511px) {
+        br {
+            display: none;
+        }
+    }
+    @media (max-width: $md4+px) {
+        font-size: 20px;
+    }
+}
+
+.thanks__info {
+    font-size: 22px;
+    font-family: 'Conv_MullerRegular';
+    text-align: left;
+    color: #0F4719;
+    span {
+        font-family: 'Conv_MullerExtraBold';
+    }
+    &::before {
+        position: absolute;
+        content: " ";
+        background: url('/img/thanks/list.png') center no-repeat;
+        width: 425px;
+        height: 433px;
+        z-index: 2;
+        left: 0;
+        bottom: -220px;
+    }
+    &::after {
+        position: absolute;
+        content: " ";
+        background: url('/img/thanks/list-2.png') center no-repeat;
+        width: 284px;
+        height: 281px;
+        z-index: 1;
+        left: 177px;
+        bottom: -177px;
+    }
+    @media (max-width: 614px) {
+        &::before {
+            background-size: 318px;
+            bottom: -271px;
+        }
+        &::after {
+            background-size: 253px;
+            left: 142px;
+            bottom: -179px
+        }
+    }
+    @media (max-width: $md4+px) {
+        font-size: 20px;
+    }
+}
+
+.thanks__krug {
+    height: 398px;
+    width: 398px;
+    background-size: 398px;
+    position: relative;
+    &::before {
+        position: absolute;
+        content: " ";
+        background: url('/img/thanks/prise.png') center no-repeat;
+        width: 230px;
+        height: 216px;
+        background-size: 245px;
+        bottom: 60px;
+        left: -12px;
+    }
+    &::after {
+        position: absolute;
+        content: " ";
+        background: url('/img/thanks/blanc.png') center no-repeat;
+        width: 290px;
+        height: 285px;
+        background-size: 290px;
+        right: -81px;
+        top: -43px;
+    }
+    @media (max-width: 812px) {
+        height: 360px;
+        width: 345px;
+        background-size: 374px;
+        &::before {
+            background-size: 208px;
+        }
+        &::after {
+            background-size: 265px;
+        }
+    }
+    @media (max-width: $md3+px) {
+        margin: 67px auto;
+    }
+    @media (max-width: 614px) {
+        margin: 40px auto;
+    }
+    @media (max-width: 499px) {
+        margin: 40px auto 0px auto;
+    }
+    @media (max-width: $md4+px) {
+        height: 328px;
+        width: 317px;
+        background-size: 334px;
+        &::before {
+            background-size: 160px;
+        }
+        &::after {
+            background-size: 220px;
+        }
+    }
+    @media (max-width: $md5+px) {
+        height: 311px;
+        width: 287px;
+        background-size: 312px;
+        &::before {
+            background-size: 136px;
+        }
+        &::after {
+            background-size: 182px;
+        }
+    }
+}
+
+.thanks__btn {
+    text-align: center;
+    padding: 0px 0px 20px 0px;
+    a {
+        font-size: 22px;
+        font-family: 'Conv_MullerRegular';
+        color: #fff;
+        position: relative;
+        padding: 18px 90px 18px 40px;
+        background-color: #FF3C3C;
+        border-radius: 50px;
+        &::after {
+            content: " ";
+            position: absolute;
+            background: url('/img/thanks/icons/telegram.svg') center no-repeat;
+            width: 40px;
+            height: 40px;
+            background-size: 40px;
+            top: 10px;
+            right: 40px;
+        }
+    }
+    @media (max-width: $md3+px) {
+        padding: 50px 0px 20px 0px;
+    }
+    @media (max-width: $md4+px) {
+        a {
+            font-size: 18px;
+        }
+    }
+    @media (max-width: 372px) {
+        a {
+            padding: 18px 60px 18px 40px;
+            &::after {
+                background-size: 30px;
+                width: 30px;
+                height: 30px;
+                right: 26px;
+            }
+        }
+    }
+}
